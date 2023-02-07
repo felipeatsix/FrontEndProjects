@@ -14,11 +14,6 @@ ul li {
     background: #eee;
     font-size: 20px;
     transition: 0.2s;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 ul li:nth-child(odd) {
