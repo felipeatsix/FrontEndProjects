@@ -1,27 +1,21 @@
 function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    if (inputValue === '') {
-        alert("You must write something!");
+    var li = document.createElement("li")
+    var input = document.getElementById("input").value
+    if (input === "") {
+        alert("Yout must provide a new item");
     }
     else {
-        li.innerHTML = inputValue
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
-
-    var span = document.createElement("span");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    let close = document.getElementsByClassName("close")
-    for (var i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            let item = this.parentNode;
-            item.remove();
+        li.innerHTML = input;
+        var span = document.createElement("span")
+        span.id = "remove"
+        span.innerHTML = "\u00D7"
+        span.onclick = function (){
+            let parent = this.parentNode;
+            parent.remove();
         }
+        li.appendChild(span);
+        document.getElementById("list").appendChild(li);
+        document.getElementById("input").value = "";
     }
 }
 function toggleCheck(ev) {
@@ -29,5 +23,4 @@ function toggleCheck(ev) {
         ev.target.classList.toggle("checked")
     }
 }
-var list = document.querySelector("ul");
-list.addEventListener("click", toggleCheck);
+document.getElementById("list").addEventListener("click", toggleCheck);
