@@ -1,4 +1,4 @@
-function newItem() {
+function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
     if (inputValue === '') {
@@ -9,16 +9,13 @@ function newItem() {
         document.getElementById("myUL").appendChild(li);
     }
     document.getElementById("myInput").value = "";
-}
-function removeButton() {
-    var listNode = document.getElementsByTagName("li")
-    for (var i = 0; i < listNode.length; i++) {
-        var span = document.createElement("span");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        listNode[i].appendChild(span);
-    }
+
+    var span = document.createElement("span");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
     let close = document.getElementsByClassName("close")
     for (var i = 0; i < close.length; i++) {
         close[i].onclick = function () {
@@ -27,12 +24,6 @@ function removeButton() {
         }
     }
 }
-
-function newElement() {
-    newItem();
-    removeButton();
-}
-
 function toggleCheck(ev) {
     if (ev.target.tagName === "LI") {
         ev.target.classList.toggle("checked")
