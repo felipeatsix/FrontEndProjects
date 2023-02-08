@@ -47,9 +47,10 @@ input {
 button {
     border-radius: 8px;
     position: relative;
+    top: 3px;
     left: 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transition: 0.3s;
 }
