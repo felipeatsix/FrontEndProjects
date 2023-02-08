@@ -5,9 +5,9 @@ function getGithubUser() {
     let input = document.getElementById("input").value
 
     function clearData() {
-        img.src = ""
-        username.innerHTML = ""
-        name.innerHTML = ""
+        img.src = "https://th.bing.com/th/id/OIP.1DLYAqE5UY19idJJOkFQegHaHa?pid=ImgDet&rs=1"
+        username.innerHTML = "Username"
+        name.innerHTML = "Name"
     }
     if (input === "") {
         alert("You must provide a valid username")
@@ -22,8 +22,8 @@ function getGithubUser() {
                     alert("User " + input + " " + result.message.toLowerCase())
                 }
                 else {
-                    name.innerHTML = "Name: " + result.name
-                    username.innerHTML = "Username: " + result.login
+                    name.innerHTML = result.name
+                    username.innerHTML = result.login
                     img.src = result.avatar_url
                 }
             })
