@@ -23,7 +23,7 @@ function getGithubUser() {
                 }
                 else {
                     name.innerHTML = result.name
-                    username.innerHTML = result.login
+                    username.innerHTML = "@" + result.login
                     img.src = result.avatar_url
                 }
             })

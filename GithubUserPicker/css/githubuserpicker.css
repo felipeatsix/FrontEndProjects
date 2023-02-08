@@ -2,6 +2,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 #search {
     padding-top: 5%;
     width: fit-content;
@@ -10,22 +11,22 @@
 }
 
 #card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: 1px solid black;
     border-radius: 30px;
     width: 500px;
     height: 600px;
-    margin: auto;
     position: relative;
     top: 100px;
+    margin: auto;
 }
 
 #name, #username {
     display: table;
     margin: 5px;
     font-size: 30px;
+    margin: auto;
+    position: relative;
+    top: 100px;
 }
 
 #search label {
@@ -37,6 +38,8 @@
 }
 
 input {
+    border: 1px solid black;
+    border-radius: 10px;
     float: left;
     font-size: 30px;
 }
@@ -62,5 +65,8 @@ img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    margin: 50px
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 60px;
 }
