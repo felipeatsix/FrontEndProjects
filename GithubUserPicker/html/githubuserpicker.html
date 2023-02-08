@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
+<head>
+    <link rel="stylesheet" href="../css/githubuserpicker.css" </head>
+
+<body>
+    <div id="search">
+        <label>Github username</label>
+        <input id="input" type="text" placeholder="Search github username">
+        <button onclick="getGithubUser()">Search</button>
+    </div>
+    <div id="card">
+        <img>
+        <div id="details">
+            <label id="name"></label>
+            <label id="username"></label>
+        </div>
+    </div>
 </body>
+<script src="../javascript/githubuserpicker.js"></script>
+
 </html>

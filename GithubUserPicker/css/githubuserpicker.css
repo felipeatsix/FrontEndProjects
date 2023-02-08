@@ -1,0 +1,59 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#search {
+    padding-top: 5%;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+#card {
+    padding-top: 50px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+#card #name {
+    display: table;
+}
+
+#details {
+    padding-top: 5%;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+#details #username {
+    padding-top: 100px;
+}
+
+#search label {
+    display: table;
+    margin: 15px;
+    position: relative;
+    right: 15px;
+    font-size: 30px
+}
+
+input {
+    float: left;
+    font-size: 30px;
+}
+
+button {
+    border-radius: 8px;
+    position: relative;
+    left: 10px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #bbb;
+}
