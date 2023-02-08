@@ -12,7 +12,7 @@ function getGithubUser() {
             .then((result) => result.json())
             .then((result) => {
                 if (!result.login) {
-                    alert("User " + input + " " + result.message)
+                    alert("User " + input + " " + result.message.toLowerCase())
                 }
                 else {
                     name.innerHTML = "Name: " + result.name
