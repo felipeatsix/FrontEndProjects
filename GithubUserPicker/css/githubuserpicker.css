@@ -1,7 +1,10 @@
+html {
+    background-color: #eee;
+}
+
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 #search {
     padding-top: 5%;
@@ -11,51 +14,59 @@
 }
 
 #card {
-    border: 1px solid black;
+    border: 1px dotted black;
     border-radius: 30px;
     width: 500px;
     height: 600px;
     position: relative;
     top: 100px;
     margin: auto;
+    background: whitesmoke;
+    background: #404040;
 }
 
-#name, #username {
+#name,
+#username {
     display: table;
     margin: 5px;
     font-size: 30px;
     margin: auto;
     position: relative;
     top: 100px;
+    color: whitesmoke;
 }
 
 #search label {
     display: table;
-    margin: 15px;
+    margin: 10px;
     position: relative;
-    right: 15px;
+    right: 10px;
     font-size: 30px
 }
 
 input {
-    border: 1px solid black;
-    border-radius: 10px;
+    border: none;
+    padding: 5px;
     float: left;
     font-size: 30px;
+    margin: 0;
 }
 
-button {
-    border-radius: 8px;
-    position: relative;
-    top: 3px;
+span {
     left: 10px;
+    font-size: 30px;
     text-align: center;
-    font-size: 25px;
     cursor: pointer;
     transition: 0.3s;
+    float: left;
+    color: black;
+    cursor: pointer;
+    background: #ddd;
+    padding: 5px;
+    margin: 0;
 }
 
-button:hover {
+span:hover {
     background-color: black;
     color: white;
 }
