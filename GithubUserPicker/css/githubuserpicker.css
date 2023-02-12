@@ -10,7 +10,13 @@ html {
     padding-top: 5%;
     width: fit-content;
     height: fit-content;
-    margin: auto;
+    margin: 0 auto;
+}
+
+#status {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 150px;
 }
 
 #card {
@@ -20,7 +26,7 @@ html {
     height: 600px;
     position: relative;
     top: 100px;
-    margin: auto;
+    margin: 0 auto;
     background: whitesmoke;
     background: #404040;
 }
@@ -30,7 +36,7 @@ html {
     display: table;
     margin: 5px;
     font-size: 30px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     top: 100px;
     color: whitesmoke;
@@ -52,7 +58,8 @@ input {
     margin: 0;
 }
 
-span {
+button {
+    border: none;
     left: 10px;
     font-size: 30px;
     text-align: center;
@@ -66,7 +73,7 @@ span {
     margin: 0;
 }
 
-span:hover {
+button:hover {
     background-color: black;
     color: white;
 }
