@@ -19,7 +19,7 @@ export default function Board() {
     function handleClick(i) {
         // Does nothing if:
         // 1. Square clicked already contains a value.
-        // 2. calculateWinner function declares a winner.
+        // 2. calculateWinner function returns a value (winner).
         if (squares[i] || calculateWinner(squares)) {
             return;
         }
