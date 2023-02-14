@@ -39,7 +39,7 @@ export default function Board() {
         setXIsNext(!xIsNext);
     }
 
-    // Declare variable that will hold the returned winner by the calculateWinner function
+    // Declare variable that will hold the value returns by the function calculateWinner
     const winner = calculateWinner(squares);
     // Declare a status variable to indicate the current status of the game after each turn.
     let status;
@@ -93,10 +93,11 @@ function calculateWinner(squares) {
     for (let i = 0; i < lines.length; i++) {
         // Foreach array, extract the first, second and third indices into variables 'a', 'b' and 'c'.
         const [a, b, c] = lines[i];
-        // Now first check if squares is not null and then use the indices ('a', 'b' and 'c') in the squares array to figure out if squares has a winning combination.
+        // Now first check if squares is not null and then use the indices ('a', 'b' and 'c') in the squares array to figure out if squares has a winning combination, if so, return it.
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
         }
     }
+    // If no winning combination is found, return null
     return null;
 }
