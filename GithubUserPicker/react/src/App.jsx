@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import './App.css'
 
 function GithubUserPicker() {
+    const defaultImageUrl = 'https://th.bing.com/th/id/OIP.1DLYAqE5UY19idJJOkFQegHaHa?pid=ImgDet&rs=1'
+
     const [inputValue, setInputValue] = useState('');
     const [name, setName] = useState('Name');
     const [username, setUsername] = useState('Username');
-    const [imgSrc, setImgSrc] = useState('https://th.bing.com/th/id/OIP.1DLYAqE5UY19idJJOkFQegHaHa?pid=ImgDet&rs=1');
+    const [imgSrc, setImgSrc] = useState(defaultImageUrl);
     const [status, setStatus] = useState('');
 
     function clearData() {
-        setImgSrc('https://th.bing.com/th/id/OIP.1DLYAqE5UY19idJJOkFQegHaHa?pid=ImgDet&rs=1');
+        setImgSrc(defaultImageUrl);
         setUsername('Username');
         setName('Name');
     }
 
-    function handleInputChange(event) {
-        setInputValue(event.target.value);
+    function handleInputChange(e) {
+        setInputValue(e.target.value);
     }
 
     function handleSearchClick() {
@@ -52,7 +54,7 @@ function GithubUserPicker() {
         <div>
             <div id="search">
                 <label>Github username</label>
-                <input type="text" placeholder="Search github username" value={inputValue} onChange={handleInputChange} />
+                <input type="text" placeholder="Search github username" onChange={handleInputChange} />
                 <button onClick={handleSearchClick}>GO</button>
             </div>
             <div id="card">
