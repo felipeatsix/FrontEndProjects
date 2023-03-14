@@ -4,27 +4,42 @@ import { describe, expect, test } from "vitest";
 import App from "./App"
 import userEvent from '@testing-library/user-event';
 
+// describe
 describe("app", () => {
+    // test something
     test("A user can search for Github users", async () => {
+        // define user variable to control user actions
         const user = userEvent.setup();
-        render(
+        // render
+        return (
             <App />
         )
-        //screen.debug()
+
+        // Define testing values
+        const testUsernamme = "felipeatsix"
+        const testName = "Felipe de Souza Santos"
+
+        // Define testing fields
         const input = screen.getByLabelText("Github username");
-        await user.type(input, "felipeatsix");
-        await user.click(screen.getByText("GO"));
-        const name = await waitFor(() => {
-            return screen.getByText("Felipe de Souza Santos")
+        const go = screen.getByText("GO");
+
+        // Execute user actions
+        await user.type(input, testUsernamme);
+        await user.click(go);
+
+        // Get the values of what's on screen from the testing fields
+        const name = await WaitFor(() => {
+            return screen.getByText(testName);
         });
         const username = screen.getByText("@felipeatsix");
         const img = screen.getByAltText("User avatar");
-        console.log(img.src);
 
+        // Test and confirm expected values
         expect(name).toBeInTheDocument();
         expect(username).toBeInTheDocument();
         expect(img).toBeInTheDocument();
-        // Snapshot concept
-        expect(img.src).toMatchInlineSnapshot('"https://avatars.githubusercontent.com/u/1855125?v=4"');
+
+        // Because the image source is a value that we can't know the exact value if we ever decide to test with a different user, let's do it using snapshots
+        expect(img.src).toMatchInlineSnapshot("https://avatars.githubusercontent.com/u/32182440?v=4");
     })
 })
