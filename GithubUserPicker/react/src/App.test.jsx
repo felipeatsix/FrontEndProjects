@@ -4,12 +4,13 @@ import { describe, expect, test } from "vitest";
 import App from "./App"
 import userEvent from '@testing-library/user-event';
 
-// describe
 describe("app", () => {
-    // test something
+
     test("A user can search for Github users", async () => {
+
         // define user variable to control user actions
         const user = userEvent.setup();
+
         // render
         return (
             <App />
