@@ -25,6 +25,6 @@ describe("app", () => {
         expect(username).toBeInTheDocument();
         expect(img).toBeInTheDocument();
         // Snapshot concept
-        expect(img.src).toMatchInlineSnapshot('"https://avatars.githubusercontent.com/u/32182440?v=4"');
+        expect(img.src).toMatchInlineSnapshot('"https://avatars.githubusercontent.com/u/1855125?v=4"');
     })
 })
