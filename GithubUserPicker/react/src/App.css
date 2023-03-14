@@ -31,8 +31,7 @@ html {
     background: #404040;
 }
 
-#name,
-#username {
+span {
     display: table;
     margin: 5px;
     font-size: 30px;
