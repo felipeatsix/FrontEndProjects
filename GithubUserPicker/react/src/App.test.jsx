@@ -12,7 +12,7 @@ describe("app", () => {
         const user = userEvent.setup();
 
         // render
-        return (
+        render(
             <App />
         )
 
