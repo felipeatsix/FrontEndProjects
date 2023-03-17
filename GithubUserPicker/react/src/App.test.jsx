@@ -29,7 +29,7 @@ describe("app", () => {
         await user.click(go);
 
         // Get the values of what's on screen from the testing fields
-        const name = await WaitFor(() => {
+        const name = await waitFor(() => {
             return screen.getByText(testName);
         });
         const username = screen.getByText("@felipeatsix");
